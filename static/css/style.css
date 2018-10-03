@@ -1,40 +1,96 @@
-.header h1 {
-    padding-top: 60px;
-    padding-bottom: 50px;
-    /* Change the size of your font to 60 pixels high. */
-    font-size: 60px;
-    /* This will color the heading font white. */
-    color: black;
-    /* Align the text to the center of its enclosing element (e.g. div). */
-    text-decoration-style: strong;
-    text-align: center;
-    /* The background of the heading element will now be black. */
-    background-color: #cdcdcd;
-  }
-
-div class="container" {
-
+html {
+    background-color: black;
 }
 
-.navbar {
-    padding: 10px;
-    /* This will color the heading font white. */
-    color: black;
-    /* Align the text to the center of its enclosing element (e.g. div). */
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 150%;
+    background-color: black;
+  }
+
+.header h1 {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    text-decoration-style: strong;
     text-align: left;
-    /* The background of the heading element will now be black. */
-    background-color: #5191fd;
+  }
+
+.container-fluid-navbar {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: black;
+}
+
+.container-fluid-info {
+    background-color: #ffffff;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+    border: black;
+}
+
+.container {
+    background-color: black;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+    border: black;
+}
+
+.col-md-8 {
+    background-color: #ffffff;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 30px;
+    border: black;
+    position: relative;
+}
+
+.col-md {
+    background-color: #ffffff;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 30px;
+    border: black;
+    position: relative;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 5px;
+    border: red;
+}
+
+.navbar-toggle collapsed {
+    padding: 10px;
+    color: black;
+    text-align: left;
+    background-color: #ffffff;
 }
 
 .navbar li {
     display: inline-block;
-    padding: 20px;
-    margin-left: 20px;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     cursor: pointer;
-    background: #ffffff;
     border-radius: 3px;
 }
 
 .navbar li a {
     color: black;
     text-decoration: none;
+}
+
+.collapse navbar-collapse {
+    background-color: #ffffff;
+    border-bottom: black;
+}

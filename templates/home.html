@@ -3,32 +3,44 @@
     <head>
         <meta charset="UTF-8">
         <title>Home</title>
-        <!-- <link rel="stylesheet" href="/static/css/reset.css"> -->
-        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/css/style.css">
     </head>
 
-
     <body>  
+        <nav class="navbar navbar-default navbar-static-top">
+                <div class="container-fluid-navbar">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+          
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse navHeaderCollapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Plots <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/temp">Temperature</a></li>
+                                    <li><a href="/humid">Humidity</a></li>
+                                    <li><a href="/cloud">Cloud Coverage</a></li>
+                                    <li><a href="/wind">Wind Speed</a></li>
+                                </ul>
+                            </li>
 
-    <!-- Check navbar bootstrap  -->
-    <div class="container">
-        <nav class="navbar">
-            <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </nav>
+                        <!-- Use the following line on appropriate pages to indicate it is the current page selected -->
+                        <!-- <li class="active"><a href="#">Comparisons <span class="sr-only">(current)</span></a></li> -->
 
+                        <li><a href="#">Comparisons</a></li>
+                        <li><a href="#">Data</a></li>
+                    </ul>
+
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+    </nav>
         <!-- The website must, at the top of every page, have a navigation menu that:
 
         Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
@@ -36,10 +48,26 @@
         Provides two more links on the right: "Comparisons" which links to the comparisons page, and "Data" which links to the data page.
         Is responsive (using media queries). The nav must have similar behavior as the screenshots "Navigation Menu" section 
         (notice the background color change). -->
-
-    <header class="header">
-        <h1>Welcome</h1>
-    </header>
+        
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8" id="summary">
+                <header class="header">
+                    <h1>Welcome</h1>
+                </header>
+            </div>
+            <div class="col-md-3" id="otherviz">
+                <header class="header">
+                    <h1>Visualizations</h1>
+                </header>
+                <p>
+                    Here is some info about the image you see here and the title describing it
+                </p>
+                <!-- <img src="../static/Images/cloud.png"> -->
+            </div>
+        </div>
+    </div>
+    
     <main>
         <h1>Home page</h1>
 
@@ -49,19 +77,59 @@
         </p>
 
         <!-- Links to four visualization pages -->
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Temperature</h4>
+                        <img src="../static/Images/temp.png" title="Temperature" width=100%>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Humidity</h4>
+                        <img src="../static/Images/humid.png" title="Humidity" width=100%>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Cloud Coverage</h4>
+                        <img src="../static/Images/cloud.png" title="Cloud Coverage" width=100%>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Wind Speed</h4>
+                        <img src="../static/Images/wind.png" title="Wind Speed" width=100%>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
         <footer>
 
         </footer>
     </main>
     </div>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 
 
