@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-        <style></style>
-    </head>
+  <head>
+    {% include "head.html" %} 
+    <title>Comparisons</title>
+  </head>
 
-    <!-- Check navbar bootstrap  -->
-    <div navbar>
-        <!-- The website must, at the top of every page, have a navigation menu that:
 
-        Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
-        Contains a dropdown on the right of the navbar named "Plots" which provides links to each individual visualization page.
-        Provides two more links on the right: "Comparisons" which links to the comparisons page, and "Data" which links to the data page.
-        Is responsive (using media queries). The nav must have similar behavior as the screenshots "Navigation Menu" section 
-        (notice the background color change). -->
+  <body>
+    {% include "navbar.html" %} 
+
+  <div class="container-fluid">
+    <div class="row align-items-top">
+        <div class="col-lg-12 col-md-12 col-sm-12" id="summary">
+          <h2>Comparison: Latitude vs. ...</h2>
+          <hr>
+          <p>Click any plot to get in-depth analysis.</p>
+          <div class="row" id="comprow">
+              <div class="col-lg-6 col-sm-12">
+                  <h3>... Temperature</h3>
+                  <a href="/temp">
+                      <img class="shadow-sm p-3 mb-5 bg-white rounded" src="../static/Images/tempWOtit.png" title="Temperature" width=100%>
+                  </a>
+              </div>
+              <div class="col-lg-6 col-sm-12">
+                <h3>... Humidity</h3>
+                  <a href="/humid">
+                      <img class="shadow-sm p-3 mb-5 bg-white rounded" src="../static/Images/humidWOtit.png" title="Humidity" width=100%>
+                  </a>
+              </div>
+          </div>
+          <div class="row" id="comprow">
+              <div class="col-lg-6 col-sm-12">
+                <h3>... Cloud Coverage</h3>
+                  <a href="/cloud">
+                      <img class="shadow-sm p-3 mb-5 bg-white rounded" src="../static/Images/cloudWOtit.png" title="Cloud Coverage" width=100%>
+                  </a>
+              </div>
+              <div class="col-lg-6 col-sm-12">
+                <h3>... Wind Speed</h3>
+                  <a href="/wind">
+                      <img class="shadow-sm p-3 mb-5 bg-white rounded" src="../static/Images/windWOtit.png" title="Wind Speed" width=100%>
+                  </a>
+              </div>
+          </div>
+        </div>
     </div>
-    
-    <body>
-        <!-- A "Comparisons" page that:
-        Contains all of the visualizations on the same page so we can easily visually compare them.
-        Uses a bootstrap grid for the visualizations.
-        The grid must be two visualizations across on screens medium and larger, and 1 across on extra-small and small screens. -->
-        <h1></h1>
-        <img src="">
-        <p>
-            A paragraph describing the plot and its significance.
-        </p>
+</div>
 
+    <footer>
+        {% include "footer.html" %}
+    </footer>
 
-        <footer>
-
-        </footer>
-
-    </body>
+    {% include "scripts.html" %} 
+  </body>
 
 </html>

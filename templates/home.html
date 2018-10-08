@@ -1,137 +1,120 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <meta charset="UTF-8">
+        {% include "head.html" %}
         <title>Home</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="../static/css/style.css">
     </head>
 
+    
     <body>  
-        <nav class="navbar navbar-default navbar-static-top">
-                <div class="container-fluid-navbar">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-          
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="collapse navbar-collapse navHeaderCollapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Plots <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="/temp">Temperature</a></li>
-                                    <li><a href="/humid">Humidity</a></li>
-                                    <li><a href="/cloud">Cloud Coverage</a></li>
-                                    <li><a href="/wind">Wind Speed</a></li>
-                                </ul>
-                            </li>
-
-                        <!-- Use the following line on appropriate pages to indicate it is the current page selected -->
-                        <!-- <li class="active"><a href="#">Comparisons <span class="sr-only">(current)</span></a></li> -->
-
-                        <li><a href="#">Comparisons</a></li>
-                        <li><a href="#">Data</a></li>
-                    </ul>
-
+        {% include "navbar.html" %}
+       
+    <div class="container-fluid w-100">
+        <div class="row align-items-top">
+            <div class="col-lg-8 col-md-12 col-sm-12" id="summary">
+                <h2>Summary: &nbsp;Effects of Latitude on Weather</h2>
+                <hr>    
+                    <div class="media">
+                        <div class="media-body">
+                                <img class="shadow-sm p-3 mb-5 bg-white rounded" id="homeImage" src="../static/Images/temp.png" alt="TemperaturevLatitude" width="50%">
+                            <p>This project randomly selected over 500 cities around the globe and evaluated 
+                                various weather metrics in relation to each cities latitude.  It was posited that certain weather conditions like temperature may be directly 
+                                correlated to distance from the equator.</p>
+                            <p>The results were an interesting mix ranging from clear relationships 
+                                to less obvious, possible connections.  Surely, other factors are at play 
+                                in some instances.  Check out the plots to investigate further!</p>
+                        </div>
                     </div>
-                    <!-- /.navbar-collapse -->
-                </div>
-    </nav>
-        <!-- The website must, at the top of every page, have a navigation menu that:
+            </div>
 
-        Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
-        Contains a dropdown on the right of the navbar named "Plots" which provides links to each individual visualization page.
-        Provides two more links on the right: "Comparisons" which links to the comparisons page, and "Data" which links to the data page.
-        Is responsive (using media queries). The nav must have similar behavior as the screenshots "Navigation Menu" section 
-        (notice the background color change). -->
+            <div class="col-lg-3 col-md-12 col-sm-12" id="otherviz">
+                <h2>Visualizations</h2>
+                <hr>
+                <div class="row" id="othervizrow">
+                    <div class="col-sm">
+                        <a href="/temp">
+                            <img class="shadow-sm p-3 mb-5 bg-white rounded" src="../static/Images/tempWO.png" title="Temperature" width=100%>
+                        </a>
+                    </div>
+                    <div class="col-sm">
+                        <a href="/humid">
+                            <img class="shadow-sm p-3 mb-5 bg-white rounded" src="../static/Images/humidWO.png" title="Humidity" width=100%>
+                        </a>
+                    </div>
+                </div>
+                <div class="row" id="othervizrow">
+                    <div class="col-sm">
+                        <a href="/cloud">
+                            <img class="shadow-sm p-3 mb-5 bg-white rounded" src="../static/Images/cloudWO.png" title="Cloud Coverage" width=100%>
+                        </a>
+                    </div>
+                    <div class="col-sm">
+                        <a href="/wind">
+                            <img class="shadow-sm p-3 mb-5 bg-white rounded" src="../static/Images/windWO.png" title="Wind Speed" width=100%>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+            <!-- Links to four visualization pages -->
+            <!-- Cards were cool to learn and play with, but need more development to look right at varying screen sizes -->
+            <!-- <section class="container-fluid" id="plots">
+                <div class="row w-100 align-items-top">
+                    <div class="col-md-3">
+                        <div class="card" id="plotCards">
+                            <a href="/temp">
+                            <div class="card-body">
+                                <h4 class="card-title">Temperature</h4>
+                                <hr>
+                                <img src="../static/Images/tempWOtit.png" title="Temperature" width=100%>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" id="plotCards">
+                            <a href="/humid">
+                            <div class="card-body">
+                                <h4 class="card-title">Humidity</h4>
+                                <hr>
+                                <img src="../static/Images/humidWOtit.png" title="Humidity" width=100%>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" id="plotCards">
+                            <a href="/cloud">
+                            <div class="card-body">
+                                <h4 class="card-title">Cloud Coverage</h4>
+                                <hr>
+                                <img src="../static/Images/cloudWOtit.png" title="Cloud Coverage" width=100%>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" id="plotCards">
+                            <a href="/wind">
+                            <div class="card-body">
+                                <h4 class="card-title">Wind Speed</h4>
+                                <hr>
+                                <img src="../static/Images/windWOtit.png" title="Wind Speed" width=100%>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
         
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8" id="summary">
-                <header class="header">
-                    <h1>Welcome</h1>
-                </header>
-            </div>
-            <div class="col-md-3" id="otherviz">
-                <header class="header">
-                    <h1>Visualizations</h1>
-                </header>
-                <p>
-                    Here is some info about the image you see here and the title describing it
-                </p>
-                <!-- <img src="../static/Images/cloud.png"> -->
-            </div>
-        </div>
-    </div>
-    
-    <main>
-        <h1>Home page</h1>
+    <footer>
+        {% include "footer.html" %}
+    </footer>
 
+    {% include "scripts.html" %}
 
-        <p>
-            Explanation of project
-        </p>
-
-        <!-- Links to four visualization pages -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Temperature</h4>
-                        <img src="../static/Images/temp.png" title="Temperature" width=100%>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Humidity</h4>
-                        <img src="../static/Images/humid.png" title="Humidity" width=100%>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Cloud Coverage</h4>
-                        <img src="../static/Images/cloud.png" title="Cloud Coverage" width=100%>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Wind Speed</h4>
-                        <img src="../static/Images/wind.png" title="Wind Speed" width=100%>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-        <footer>
-
-        </footer>
-    </main>
-    </div>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </body>
-
-
+</body>
 
 </html>

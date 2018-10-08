@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default navbar-expand-md">
+    <div class="container-fluid" id="navbarFlush">
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <a class="navbar-brand" href="/">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navHeaderCollapse" aria-controls="navHeaderCollapse" aria-expanded="true" aria-label="Toggle Plots">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="navbar-collapse collapse justify-content-end" id="navHeaderCollapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="plotdropdown" data-toggle="dropdown" aria-haspopup="true", aria-expanded="false">Plots <b class="caret"></b></a>
+                    <div class="dropdown-menu" aria-labelledby="plotdropdown">
+                        <a class="dropdown-item" href="/temp">Temperature</a>
+                        <a class="dropdown-item" href="/humid">Humidity</a>
+                        <a class="dropdown-item" href="/cloud">Cloud Coverage</a>
+                        <a class="dropdown-item" href="/wind">Wind Speed</a>
+                    </div>
+                </li>
+                <div class="dropdown-divider"></div>
+            <!-- Use the following line on appropriate pages to indicate it is the current page selected -->
+            <!-- <li class="active"><a href="#">Comparisons <span class="sr-only">(current)</span></a></li> -->
+                <li class="nav-item"><a class="nav-link" href="/comps">Comparisons</a></li>
+                <li class="nav-item"><a class="nav-link" href="/data">Data</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

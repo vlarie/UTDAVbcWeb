@@ -7,33 +7,30 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-# A landing page containing:
-# An explanation of the project.
-# Links to each visualizations page.
+
 @app.route("/")
 def home():
     print("Server received request for 'Home' page...")
     return render_template("home.html")
 
 
-# Four visualization pages, each with:
-# A descriptive title and heading tag.
-# The plot/visualization itself for the selected comparison.
-# A paragraph describing the plot and its significance.
 @app.route("/temp")
 def temp():
     print("Server received request for 'Temperature' page...")
     return render_template("temp.html")
+
 
 @app.route("/humid")
 def humid():
     print("Server received request for 'Humidity' page...")
     return render_template("humid.html")
 
+
 @app.route("/wind")
 def wind():
     print("Server received request for 'Wind Speed' page...")
     return render_template("wind.html")
+
 
 @app.route("/cloud")
 def cloud():
@@ -41,25 +38,16 @@ def cloud():
     return render_template("cloud.html")
 
 
-# A "Comparisons" page that:
-# Contains all of the visualizations on the same page so we can easily visually compare them.
-# Uses a bootstrap grid for the visualizations.
-# The grid must be two visualizations across on screens medium and larger, and 1 across on extra-small and small screens.
 @app.route("/comps")
 def comps():
     print("Server received request for 'Comparisons' page...")
     return render_template("comps.html")
 
 
-# A "Data" page that:
-# Displays a responsive table containing the data used in the visualizations.
-# The table must be a bootstrap table component.
-# The data must come from exporting the .csv file as HTML, or converting it to HTML. 
-# You may use a csv-to-html table conversion tool, e.g. ConvertCSV.
 @app.route("/data")
 def data():
     print("Server received request for 'Data' page...")
-    return csvhtml
+    return render_template("data.html")
 
 
 
